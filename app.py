@@ -1,9 +1,8 @@
-
 import numpy as np
 import pandas as pd
 from flask import Flask, request, jsonify, render_template
 import pickle
-app = Flask(__name__)
+app = Flask(_name_)
 from keras.models import load_model
 model = load_model('churnmodelANN.h5')
 # Importing the dataset
@@ -46,6 +45,7 @@ sc_X = StandardScaler()
 X_train = sc_X.fit_transform(X_train)
 X_test = sc_X.transform(X_test)
 
+
 @app.route('/')
 def home():
   
@@ -77,5 +77,6 @@ def predict():
     result="Customer will exit bank"
         
   return render_template('index.html', prediction_text='Model  has predicted  : {}'.format(result))
- if_name_=='_main_':
+
+if _name_ == "_main_" :
  app.run(debug=True)
