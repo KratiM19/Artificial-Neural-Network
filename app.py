@@ -77,6 +77,5 @@ def predict():
     result="Customer will exit bank"
         
   return render_template('index.html', prediction_text='Model  has predicted  : {}'.format(result))
-
-if_name_=='_main_':
+ if_name_=='_main_':
  app.run(debug=True)
