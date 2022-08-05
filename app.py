@@ -78,5 +78,5 @@ def predict():
         
   return render_template('index.html', prediction_text='Model  has predicted  : {}'.format(result))
 
-if _name_ == "_main_" :
+if _name_ == "_main_":
  app.run(debug=True)
